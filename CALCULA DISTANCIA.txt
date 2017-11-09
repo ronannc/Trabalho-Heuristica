@@ -1,0 +1,17 @@
+void calcula_distancia(Node node, int raio) {
+    int i, j;
+	Node *ponto1 = node;
+	Node *ponto2 = node;
+	double distancia;
+	for (i = 0; i < node->tam; i++) {
+		for (j = 0; j < node->tam; j++) {
+			if (i != j) {
+				distancia = sqrt(pow((ponto1->x - ponto2->x), 2) + pow((ponto1->y - ponto2->y), 2));
+				if (distancia <= raio) {
+					insere_fim_nodee(ponto2) //--
+				}
+			}
+			ponto2 = ponto2->prox;
+		}
+		ponto1 = ponto1->prox;
+	}
