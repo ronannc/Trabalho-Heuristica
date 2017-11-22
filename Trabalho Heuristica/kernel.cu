@@ -3,6 +3,8 @@
 #include "Simulated_Annealing.h"
 #include "GRASP.h"
 
+const int max_iter = 100;
+
 int main()
 {
 	node *lista;
@@ -82,7 +84,7 @@ int main()
 	//simulated_annealing(lista, facilidades);
 
 	/*GRASP*/
-	GRASP(lista, facilidades);
+	GRASP(lista, facilidades, max_iter);
 
 	fclose(arq_demanda);
 	fclose(arq_pontos);

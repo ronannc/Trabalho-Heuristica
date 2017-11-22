@@ -257,3 +257,19 @@ void incrementa_coberto(node *LISTA, int id) {
 		}	
 		tmp->coberto++;
 }
+
+void decrementa_coberto(node *LISTA, int id) {
+
+	node *tmp;
+
+	if (vazia(LISTA)) {
+		printf("Lista vazia!\n\n");
+	}
+
+	tmp = LISTA->prox;
+
+	for (int i = 0; i < id; i++) {
+		tmp = tmp->prox;
+	}
+	tmp->coberto--;
+}
