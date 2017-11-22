@@ -1,9 +1,10 @@
 
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-#include "lista.h"
 #include "calc_distancia.h"
 #include <stdio.h>
+#include "Simulated_Annealing.h"
+
 int main()
 {
 	node *lista;
@@ -78,6 +79,11 @@ int main()
 	
 
 	exibe(lista);
+
+	/*SA*/
+	simulated_annealing(lista, facilidades);
+
+	/*GRASP*/
 
 	fclose(arq_demanda);
 	fclose(arq_pontos);

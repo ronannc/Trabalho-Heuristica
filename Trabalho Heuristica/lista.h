@@ -9,6 +9,7 @@ struct Node {
 	ponto *raio;
 	struct Node *prox;
 	int tam;
+	int coberto;
 };
 typedef struct Node node;
 
@@ -19,6 +20,7 @@ void inicia(node *LISTA)
 
 	LISTA->prox = NULL;
 	LISTA->tam = 0;
+
 }
 
 int vazia(node *LISTA)
@@ -38,6 +40,7 @@ node *aloca(int x, int y, int demanda)
 	}
 	else {
 		//printf("Novo elemento: "); scanf("%d", &novo->num);
+		novo->coberto = 0;
 		novo->cord_x = x;
 		novo->cord_y = y;
 		novo->demanda = demanda;
@@ -104,7 +107,7 @@ void exibe(node *LISTA)
 	tmp = LISTA->prox;
 
 	while (tmp != NULL) {
-		printf("x: %d, y: %d, demanda: %d\n", tmp->cord_x, tmp->cord_y, tmp->demanda);
+		printf("x: %d, y: %d, demanda: %d coberto: %d\n", tmp->cord_x, tmp->cord_y, tmp->demanda, tmp->coberto);
 		printf("Pntos no alcance\n");
 		exibe_pontos(tmp->raio);
 		tmp = tmp->prox;
@@ -226,4 +229,31 @@ int contens(node *LISTA, int x, int y) {
 		}
 	}
 	return 0;
+}
+
+int procura(node *LISTA, int x, int y) {
+
+	for (int i = 0; i < LISTA->tam; i++) {
+
+		if ((numPos(LISTA, i).cord_x == x) && (numPos(LISTA, i).cord_y == y)) {
+			return i;
+		}
+	}
+	return 0;
+}
+
+void incrementa_coberto(node *LISTA, int id) {
+		
+		node *tmp;
+
+		if (vazia(LISTA)) {
+			printf("Lista vazia!\n\n");
+		}
+
+		tmp = LISTA->prox;
+
+		for (int i = 0; i < id; i++) {
+			tmp = tmp->prox;
+		}	
+		tmp->coberto++;
 }

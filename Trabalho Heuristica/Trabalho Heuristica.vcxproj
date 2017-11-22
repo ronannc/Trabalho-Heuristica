@@ -157,6 +157,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     <ClInclude Include="calc_distancia.h" />
     <ClInclude Include="lista.h" />
     <ClInclude Include="ListaPontos.h" />
+    <ClInclude Include="Simulated_Annealing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
