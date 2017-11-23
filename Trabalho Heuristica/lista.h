@@ -112,7 +112,6 @@ void exibe(node *LISTA)
 		exibe_pontos(tmp->raio);
 		tmp = tmp->prox;
 	}
-	printf("\n");
 }
 
 void libera(node *LISTA)
@@ -272,4 +271,20 @@ void decrementa_coberto(node *LISTA, int id) {
 		tmp = tmp->prox;
 	}
 	tmp->coberto--;
+}
+
+void zera_pontos_cobertos(node *LISTA) {
+	node *tmp;
+
+	if (vazia(LISTA)) {
+		printf("Lista vazia!\n\n");
+	}
+
+	tmp = LISTA->prox;
+
+	for (int i = 0; i < LISTA->tam; i++) {
+		
+		tmp->coberto = 0;
+		tmp = tmp->prox;
+	}	
 }

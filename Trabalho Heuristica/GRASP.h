@@ -7,9 +7,11 @@ void GRASP_descobrindo_ponto(node *lista_ponto, int x, int y);
 int GRASP_demanda_coberta(node *lista_ponto, ponto *solucao);
 int GRASP_demanda_coberta(node *lista_ponto, int x, int y);
 void LocalSearch(ponto *solucao_parcial, node *lista_ponto);
-
+void Update_Soluction(ponto *solucao_parcial, node *lista_pontos, ponto *solucao);
 
 void GRASP(node *lista_pontos, int facilidades, int max_iter) {
+
+	srand(time(NULL));
 
 	/*solução*/
 	ponto *solucao;
@@ -24,20 +26,27 @@ void GRASP(node *lista_pontos, int facilidades, int max_iter) {
 	inicia_pontos(solucao_parcial);
 
 	/*inicio grasp*/
-	//for (int i = 0; i < max_iter; i++) {
+	for (int i = 0; i < max_iter; i++) {
+		
 		/*gera a solução inicial*/
 		GreedyRandomizedConstruction(solucao_parcial ,lista_pontos, facilidades);
 		/*busca local na solução afim de buscar o melhor local*/
 		LocalSearch(solucao_parcial, lista_pontos);
+		/*atualiza a solução se ela for melhor, se nao mantem*/
+		Update_Soluction(solucao_parcial, lista_pontos, solucao);
+		
+		zera_pontos_cobertos(lista_pontos);
+		libera_pontos(solucao_parcial);
+		inicia_pontos(solucao_parcial);
+	}
 
-	//}
-	
+	printf("Solucao Final:\n");
+	exibe_pontos(solucao);
+	printf("Demanda Coberta: %d\n", GRASP_demanda_coberta(lista_pontos, solucao));
 }
 
 /*Gera a solução inicial aleatoria*/
 void GreedyRandomizedConstruction(ponto *solucao_parcial, node *lista_ponto, int facilidades) {
-
-	srand(time(NULL));
 
 	int id = 0;
 
@@ -54,24 +63,28 @@ void GreedyRandomizedConstruction(ponto *solucao_parcial, node *lista_ponto, int
 	}
 	/*solução inicial gerada com o tamanho igual ao numero de facilidades disponiveis*/
 
-	printf("Solução inicial\n");
+	//printf("Solução inicial\n");
 
-	exibe_pontos(solucao_parcial);
+	//exibe_pontos(solucao_parcial);
 
 	/*vejo quais os pontos foram cobertos por essa solução inicial e a demanda coberta*/
-	printf("Demanda coberta: %d\n", GRASP_demanda_coberta(lista_ponto, solucao_parcial));
+	//printf("Demanda coberta: %d\n", GRASP_demanda_coberta(lista_ponto, solucao_parcial));
 }
 
 int GRASP_demanda_coberta(node *lista_ponto, ponto *solucao) {
 	
 	int demanda_coberta = 0;
-
+	int id = 0;
+	int aux_id;
 	/*calculando a demanda coberta*/
-	for (int i = 0; i < lista_ponto->tam; i++) {
+	for (int i = 0; i < solucao->tam; i++) {
+		id = procura(lista_ponto, numPos_pontos(solucao, i).cord_x, numPos_pontos(solucao, i).cord_y);
+		for (int j = 0; j < numPos(lista_ponto, id).raio->tam; j++) {
 
-		if (numPos(lista_ponto, i).coberto) {
-			demanda_coberta += numPos(lista_ponto, i).demanda;
-		}
+			aux_id = procura(lista_ponto, numPos_pontos(numPos(lista_ponto, id).raio, j).cord_x, numPos_pontos(numPos(lista_ponto, id).raio, j).cord_y);
+
+			demanda_coberta += numPos(lista_ponto, aux_id).demanda;
+		}		
 	}
 	return demanda_coberta;
 }
@@ -118,8 +131,6 @@ void GRASP_descobrindo_ponto(node *lista_ponto, int x, int y) {
 
 void LocalSearch(ponto *solucao_parcial, node *lista_ponto) {
 
-	srand(time(NULL));
-
 	int aux_id = 0;
 
 	int max_demanda = GRASP_demanda_coberta(lista_ponto, solucao_parcial);
@@ -127,29 +138,47 @@ void LocalSearch(ponto *solucao_parcial, node *lista_ponto) {
 	/*sorteio um ponto da sulução inicial*/
 	int id = rand() % solucao_parcial->tam;
 
-	/*descrobre os pontos que ele cobre*/
+	/*descobre os pontos que ele cobre*/
 	GRASP_descobrindo_ponto(lista_ponto, numPos_pontos(solucao_parcial, id).cord_x, numPos_pontos(solucao_parcial, id).cord_y);
 
 	/*retiro esse ponto da solução e decremento os pontos que ela cobria*/
 	retira_pontos(solucao_parcial, id);
 	
 	int demanda = GRASP_demanda_coberta(lista_ponto, solucao_parcial);
-
+	int aux_demanda = 0;
 	/*procurar o melhor ponto a se colocar a facilidade com a solução parcial*/
 	for (int i = 0; i < lista_ponto->tam; i++) {
-
-		if (max_demanda < demanda + GRASP_demanda_coberta(lista_ponto, numPos(lista_ponto, i).cord_x, numPos(lista_ponto, i).cord_y)) {
+		aux_demanda = demanda + GRASP_demanda_coberta(lista_ponto, numPos(lista_ponto, i).cord_x, numPos(lista_ponto, i).cord_y);
+		if (max_demanda < aux_demanda ) {
 			aux_id = i;
+			max_demanda = aux_demanda;
 		}
 	}
 
 	insereFim_pontos(solucao_parcial, numPos(lista_ponto, aux_id).cord_x, numPos(lista_ponto, aux_id).cord_y);
 	GRASP_cobrindo_ponto(lista_ponto, numPos(lista_ponto, aux_id).cord_x, numPos(lista_ponto, aux_id).cord_y);
 
-	printf("Solução depois da busca local\n");
+	//printf("Solução depois da busca local\n");
 
-	exibe_pontos(solucao_parcial);
+	//exibe_pontos(solucao_parcial);
 
 	/*vejo quais os pontos foram cobertos por essa solução inicial e a demanda coberta*/
-	printf("Demanda coberta: %d\n", GRASP_demanda_coberta(lista_ponto, solucao_parcial));
+	//printf("Demanda coberta: %d\n", GRASP_demanda_coberta(lista_ponto, solucao_parcial));
+}
+
+void Update_Soluction(ponto *solucao_parcial, node *lista_pontos, ponto *solucao) {
+
+	int max_demanda = GRASP_demanda_coberta(lista_pontos, solucao_parcial);
+	zera_pontos_cobertos(lista_pontos);
+	for (int i = 0; i < solucao_parcial->tam;i++) {
+		GRASP_cobrindo_ponto(lista_pontos,numPos_pontos(solucao_parcial, i).cord_x, numPos_pontos(solucao_parcial, i).cord_y);
+	}
+	int demanda = GRASP_demanda_coberta(lista_pontos, solucao);
+	if (max_demanda > demanda){
+		libera_pontos(solucao);
+		inicia_pontos(solucao);
+		for (int i = 0; i < solucao_parcial->tam; i++) {
+			insereFim_pontos(solucao, numPos_pontos(solucao_parcial, i).cord_x, numPos_pontos(solucao_parcial, i).cord_y);
+		}
+	}
 }

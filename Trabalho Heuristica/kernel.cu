@@ -24,11 +24,11 @@ int main()
 	}
 
 	inicia(lista);
-	printf("iniciada listas de lista\n");
+	//printf("iniciada listas de lista\n");
 	//system("pause");
 
 	inicia_pontos(pontos_alcance);
-	printf("iniciada listas pontos\n");
+	//printf("iniciada listas pontos\n");
 	//system("pause");
 
 	FILE *arq_pontos;
@@ -59,6 +59,9 @@ int main()
 		}
 	}
 
+	fclose(arq_demanda);
+	fclose(arq_pontos);
+	
 	//exibe(lista);
 
 	printf("lista de pontos preenchida\n");
@@ -78,16 +81,13 @@ int main()
 	}
 	
 
-	exibe(lista);
+	//exibe(lista);
 
 	/*SA*/
 	//simulated_annealing(lista, facilidades);
 
 	/*GRASP*/
 	GRASP(lista, facilidades, max_iter);
-
-	fclose(arq_demanda);
-	fclose(arq_pontos);
 
 	free(lista);
 	free(pontos_alcance);

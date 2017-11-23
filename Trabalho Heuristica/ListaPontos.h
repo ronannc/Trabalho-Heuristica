@@ -95,10 +95,9 @@ void exibe_pontos(ponto *LISTA)
 	ponto *tmp;
 	tmp = LISTA->prox;
 	while (tmp != NULL) {
-		printf("%d, %d\n", tmp->cord_x, tmp->cord_y);
+		printf("x: %d, y: %d\n", tmp->cord_x, tmp->cord_y);
 		tmp = tmp->prox;
 	}
-	printf("\n");
 }
 
 void libera_pontos(ponto *LISTA)
