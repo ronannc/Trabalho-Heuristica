@@ -34,7 +34,7 @@ void solucao_inicial(node *lista_ponto, int facilidades) {
 			/*enquanto conter na lista ponto um ponto ja sorteado é sorteado outro id*/
 		} while (contens_pontos(solucao, numPos(lista_ponto, id).cord_x, numPos(lista_ponto, id).cord_y));		
 		/*insiro na lista o novo ponto*/
-		insereFim_pontos(solucao, numPos(lista_ponto, id).cord_x, numPos(lista_ponto, id).cord_y);
+		insereFim_pontos(solucao, numPos(lista_ponto, id).cord_x, numPos(lista_ponto, id).cord_y, numPos(lista_ponto, id).demanda);
 	}
 	/*solução inicial gerada com o tamanho igual ao numero de facilidades disponiveis*/
 

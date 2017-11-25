@@ -4,6 +4,7 @@
 struct Pontos {
 	int cord_x;
 	int cord_y;
+	int demanda;
 	struct Pontos *prox;
 	int tam;
 };
@@ -23,7 +24,7 @@ int vazia_pontos(ponto *LISTA)
 		return 0;
 }
 
-ponto *aloca_pontos(int x, int y)
+ponto *aloca_pontos(int x, int y, int demanda)
 {
 	ponto *novo = (ponto *)malloc(sizeof(ponto));
 	if (!novo) {
@@ -34,13 +35,14 @@ ponto *aloca_pontos(int x, int y)
 		//printf("Novo elemento: "); scanf("%d", &novo->num);
 		novo->cord_x = x;
 		novo->cord_y = y;
+		novo->demanda = demanda;
 		return novo;
 	}
 }
 
-void insereFim_pontos(ponto *LISTA, int x, int y)
+void insereFim_pontos(ponto *LISTA, int x, int y, int demanda)
 {
-	ponto *novo = aloca_pontos(x, y);
+	ponto *novo = aloca_pontos(x, y, demanda);
 	novo->prox = NULL;
 
 	if (vazia_pontos(LISTA))
@@ -56,9 +58,9 @@ void insereFim_pontos(ponto *LISTA, int x, int y)
 	LISTA->tam++;
 }
 
-void insereInicio_pontos(ponto *LISTA, int x, int y)
+void insereInicio_pontos(ponto *LISTA, int x, int y, int demanda)
 {
-	ponto *novo = aloca_pontos(x, y);
+	ponto *novo = aloca_pontos(x, y, demanda);
 	ponto *oldHead = LISTA->prox;
 
 	LISTA->prox = novo;
@@ -115,17 +117,17 @@ void libera_pontos(ponto *LISTA)
 	}
 }
 
-void insere_pontos(ponto *LISTA, int x, int y, int id)
+void insere_pontos(ponto *LISTA, int x, int y, int id, int demanda)
 {
 	int count;
 
 	if (id >= 0 && id < LISTA->tam) {
 		if (id == 0)
-			insereInicio_pontos(LISTA, x, y);
+			insereInicio_pontos(LISTA, x, y, demanda);
 		else {
 			ponto *atual = LISTA->prox,
 				*anterior = LISTA;
-			ponto *novo = aloca_pontos(x, y);
+			ponto *novo = aloca_pontos(x, y, demanda);
 
 			for (count = 0; count < id; count++) {
 				anterior = atual;

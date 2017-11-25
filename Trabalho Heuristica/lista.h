@@ -238,7 +238,7 @@ int procura(node *LISTA, int x, int y) {
 			return i;
 		}
 	}
-	return 0;
+	return -1;
 }
 
 void incrementa_coberto(node *LISTA, int id) {
