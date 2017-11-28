@@ -109,9 +109,9 @@ int main()
         Ticks[0] = clock();
             GRASP(lista, j, max_iter, pf);
         Ticks[1] = clock();
-        printf("Tempo gasto: %d\n\n", (Ticks[1] - Ticks[0]) / CLOCKS_PER_SEC);
+        printf("Tempo gasto: %ld\n\n", (Ticks[1] - Ticks[0]) / CLOCKS_PER_SEC);
 
-        fprintf(pf, "Tempo gasto: %d\n\n", (Ticks[1] - Ticks[0]) / CLOCKS_PER_SEC);
+        fprintf(pf, "Tempo gasto: %ld\n\n", (Ticks[1] - Ticks[0]) / CLOCKS_PER_SEC);
     }
     
 
