@@ -3,7 +3,7 @@
 #include "Simulated_Annealing.h"
 #include "GRASP.h"
 
-const int max_iter = 300;
+const int max_iter = 100;
 
 int main()
 {
@@ -39,8 +39,8 @@ int main()
 	int raio = 0;
 	int facilidades = 0;
 
-	arq_pontos = fopen("Dataset/SJC324.dat", "r");
-	arq_demanda = fopen("Dataset/demand-SJC324.dat", "r");
+	arq_pontos = fopen("Dataset/SJC818.dat", "r");
+	arq_demanda = fopen("Dataset/demand-SJC818.dat", "r");
 
 	if ((arq_pontos == NULL) || (arq_demanda == NULL)) {
 

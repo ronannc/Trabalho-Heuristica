@@ -121,3 +121,372 @@ x: 409670 y: 435514
 Demanda Coberta: 11984
 Tempo gasto: 47
 
+GRASP max_iter: 100
+pontos: 402 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409090 y: 434982
+Demanda Coberta: 6555
+Tempo gasto: 13
+
+pontos: 402 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409946 y: 436015
+x: 409090 y: 434982
+Demanda Coberta: 10927
+Tempo gasto: 15
+
+pontos: 402 facilidades: 3 raio: 800
+Solução final GRASP
+x: 409858 y: 436418
+x: 410220 y: 435613
+x: 409090 y: 434982
+Demanda Coberta: 13473
+Tempo gasto: 18
+
+pontos: 402 facilidades: 4 raio: 800
+Solução final GRASP
+x: 409482 y: 436380
+x: 410439 y: 436137
+x: 410347 y: 435267
+x: 409090 y: 434982
+Demanda Coberta: 14488
+Tempo gasto: 21
+
+pontos: 402 facilidades: 5 raio: 800
+Solução final GRASP
+x: 410437 y: 435739
+x: 409512 y: 436236
+x: 410808 y: 435074
+x: 408215 y: 434274
+x: 409090 y: 434982
+Demanda Coberta: 14852
+Tempo gasto: 23
+
+GRASP max_iter: 200
+pontos: 402 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409090 y: 434982
+Demanda Coberta: 6555
+Tempo gasto: 27
+
+pontos: 402 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409946 y: 436015
+x: 409090 y: 434982
+Demanda Coberta: 10927
+Tempo gasto: 32
+
+pontos: 402 facilidades: 3 raio: 800
+Solução final GRASP
+x: 410325 y: 435510
+x: 409322 y: 436406
+x: 409090 y: 434982
+Demanda Coberta: 13805
+Tempo gasto: 38
+
+pontos: 402 facilidades: 4 raio: 800
+Solução final GRASP
+x: 409512 y: 436236
+x: 410593 y: 435427
+x: 409812 y: 434774
+x: 409090 y: 434982
+Demanda Coberta: 14529
+Tempo gasto: 43
+
+pontos: 402 facilidades: 5 raio: 800
+Solução final GRASP
+x: 410721 y: 435245
+x: 409670 y: 435514
+x: 410113 y: 436329
+x: 409553 y: 436813
+x: 409090 y: 434982
+Demanda Coberta: 14923
+Tempo gasto: 49
+
+GRASP max_iter: 300
+pontos: 402 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409090 y: 434982
+Demanda Coberta: 6555
+Tempo gasto: 43
+
+pontos: 402 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409711 y: 436281
+x: 409090 y: 434982
+Demanda Coberta: 11002
+Tempo gasto: 49
+
+pontos: 402 facilidades: 3 raio: 800
+Solução final GRASP
+x: 410746 y: 435470
+x: 409701 y: 436391
+x: 409090 y: 434982
+Demanda Coberta: 14089
+Tempo gasto: 62
+
+pontos: 402 facilidades: 4 raio: 800
+Solução final GRASP
+x: 410371 y: 435374
+x: 408392 y: 434637
+x: 409482 y: 436380
+x: 409090 y: 434982
+Demanda Coberta: 14494
+Tempo gasto: 67
+
+pontos: 402 facilidades: 5 raio: 800
+Solução final GRASP
+x: 410205 y: 436634
+x: 409261 y: 436338
+x: 408489 y: 434590
+x: 410705 y: 435132
+x: 409090 y: 434982
+Demanda Coberta: 15113
+Tempo gasto: 79
+
+GRASP max_iter: 100
+pontos: 500 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 7944
+Tempo gasto: 25
+
+pontos: 500 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409837 y: 436155
+x: 409037 y: 434325
+Demanda Coberta: 12237
+Tempo gasto: 27
+
+pontos: 500 facilidades: 3 raio: 800
+Solução final GRASP
+x: 409624 y: 435752
+x: 407839 y: 433681
+x: 409037 y: 434325
+Demanda Coberta: 14554
+Tempo gasto: 32
+
+pontos: 500 facilidades: 4 raio: 800
+Solução final GRASP
+x: 408046 y: 433484
+x: 410604 y: 435208
+x: 409328 y: 435891
+x: 409037 y: 434325
+Demanda Coberta: 16406
+Tempo gasto: 33
+
+pontos: 500 facilidades: 5 raio: 800
+Solução final GRASP
+x: 410041 y: 435866
+x: 407625 y: 433791
+x: 408386 y: 434010
+x: 409456 y: 436520
+x: 409037 y: 434325
+Demanda Coberta: 16949
+Tempo gasto: 40
+
+GRASP max_iter: 200
+pontos: 500 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 7944
+Tempo gasto: 51
+
+pontos: 500 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409645 y: 436119
+x: 409037 y: 434325
+Demanda Coberta: 12454
+Tempo gasto: 56
+
+pontos: 500 facilidades: 3 raio: 800
+Solução final GRASP
+x: 409512 y: 436236
+x: 408165 y: 433621
+x: 409037 y: 434325
+Demanda Coberta: 14766
+Tempo gasto: 64
+
+pontos: 500 facilidades: 4 raio: 800
+Solução final GRASP
+x: 409645 y: 436119
+x: 409684 y: 434946
+x: 407625 y: 433791
+x: 409037 y: 434325
+Demanda Coberta: 16476
+Tempo gasto: 68
+
+pontos: 500 facilidades: 5 raio: 800
+Solução final GRASP
+x: 409657 y: 436892
+x: 410373 y: 435785
+x: 408391 y: 433914
+x: 409328 y: 435891
+x: 409037 y: 434325
+Demanda Coberta: 16968
+Tempo gasto: 73
+
+GRASP max_iter: 300
+pontos: 500 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 7944
+Tempo gasto: 78
+
+pontos: 500 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409711 y: 436281
+x: 409037 y: 434325
+Demanda Coberta: 12387
+Tempo gasto: 83
+
+pontos: 500 facilidades: 3 raio: 800
+Solução final GRASP
+x: 408016 y: 433564
+x: 409837 y: 436155
+x: 409037 y: 434325
+Demanda Coberta: 14649
+Tempo gasto: 94
+
+pontos: 500 facilidades: 4 raio: 800
+Solução final GRASP
+x: 408178 y: 433148
+x: 409858 y: 436418
+x: 409754 y: 435326
+x: 409037 y: 434325
+Demanda Coberta: 16207
+Tempo gasto: 102
+
+pontos: 500 facilidades: 5 raio: 800
+Solução final GRASP
+x: 407788 y: 433274
+x: 409711 y: 436281
+x: 407439 y: 434507
+x: 410771 y: 435417
+x: 409037 y: 434325
+Demanda Coberta: 17474
+Tempo gasto: 112
+
+GRASP max_iter: 100
+pontos: 818 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 8393
+Tempo gasto: 93
+
+pontos: 818 facilidades: 2 raio: 800
+Solução final GRASP
+x: 410041 y: 435866
+x: 409037 y: 434325
+Demanda Coberta: 13091
+Tempo gasto: 99
+
+pontos: 818 facilidades: 3 raio: 800
+Solução final GRASP
+x: 411715 y: 435683
+x: 409837 y: 436155
+x: 409037 y: 434325
+Demanda Coberta: 16501
+Tempo gasto: 108
+
+pontos: 818 facilidades: 4 raio: 800
+Solução final GRASP
+x: 411715 y: 435683
+x: 408165 y: 433621
+x: 409147 y: 436256
+x: 409037 y: 434325
+Demanda Coberta: 18619
+Tempo gasto: 121
+
+pontos: 818 facilidades: 5 raio: 800
+Solução final GRASP
+x: 409670 y: 435514
+x: 409016 y: 436511
+x: 409923 y: 434767
+x: 411973 y: 435761
+x: 409037 y: 434325
+Demanda Coberta: 18959
+Tempo gasto: 137
+
+GRASP max_iter: 100
+pontos: 818 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 8393
+Tempo gasto: 87
+
+pontos: 818 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409512 y: 436236
+x: 409037 y: 434325
+Demanda Coberta: 13230
+Tempo gasto: 90
+
+pontos: 818 facilidades: 3 raio: 800
+Solução final GRASP
+x: 409442 y: 435913
+x: 411459 y: 435554
+x: 409037 y: 434325
+Demanda Coberta: 15653
+Tempo gasto: 107
+
+pontos: 818 facilidades: 4 raio: 800
+Solução final GRASP
+x: 410808 y: 435074
+x: 412354 y: 436001
+x: 407788 y: 433274
+x: 409037 y: 434325
+Demanda Coberta: 17624
+Tempo gasto: 125
+
+pontos: 818 facilidades: 5 raio: 800
+Solução final GRASP
+x: 410837 y: 436079
+x: 411926 y: 435590
+x: 407694 y: 433514
+x: 409570 y: 435942
+x: 409037 y: 434325
+Demanda Coberta: 20535
+Tempo gasto: 121
+
+GRASP max_iter: 100
+pontos: 818 facilidades: 1 raio: 800
+Solução final GRASP
+x: 409037 y: 434325
+Demanda Coberta: 8393
+Tempo gasto: 83
+
+pontos: 818 facilidades: 2 raio: 800
+Solução final GRASP
+x: 409837 y: 436155
+x: 409037 y: 434325
+Demanda Coberta: 13147
+Tempo gasto: 87
+
+pontos: 818 facilidades: 3 raio: 800
+Solução final GRASP
+x: 409765 y: 435617
+x: 411217 y: 435493
+x: 409037 y: 434325
+Demanda Coberta: 15944
+Tempo gasto: 92
+
+pontos: 818 facilidades: 4 raio: 800
+Solução final GRASP
+x: 409442 y: 435810
+x: 410939 y: 434936
+x: 411707 y: 436337
+x: 409037 y: 434325
+Demanda Coberta: 17966
+Tempo gasto: 109
+
+pontos: 818 facilidades: 5 raio: 800
+Solução final GRASP
+x: 407558 y: 433845
+x: 410298 y: 435298
+x: 409788 y: 436708
+x: 412434 y: 436410
+x: 409037 y: 434325
+Demanda Coberta: 21461
+Tempo gasto: 116
+
