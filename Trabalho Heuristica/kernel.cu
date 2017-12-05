@@ -10,25 +10,14 @@ int main()
 	node *lista;
 	lista = (node *)malloc(sizeof(node));
 
-	ponto *pontos_alcance;
-	pontos_alcance = (ponto *)malloc(sizeof(ponto));
 
 	if (!lista) {
 		printf("Sem memoria disponivel!\n");
 		exit(1);
 	}
 
-	if (!pontos_alcance) {
-		printf("Sem memoria disponivel!\n");
-		exit(1);
-	}
-
 	inicia(lista);
 	//printf("iniciada listas de lista\n");
-	//system("pause");
-
-	inicia_pontos(pontos_alcance);
-	//printf("iniciada listas pontos\n");
 	//system("pause");
 
 	FILE *arq_pontos;
@@ -39,8 +28,8 @@ int main()
 	int raio = 0;
 	int facilidades = 0;
 
-	arq_pontos = fopen("Dataset/SJC818.dat", "r");
-	arq_demanda = fopen("Dataset/demand-SJC818.dat", "r");
+	arq_pontos = fopen("Dataset/SJC402.dat", "r");
+	arq_demanda = fopen("Dataset/demand-SJC402.dat", "r");
 
 	if ((arq_pontos == NULL) || (arq_demanda == NULL)) {
 
@@ -115,7 +104,7 @@ int main()
 	
 
 	free(lista);
-	free(pontos_alcance);
+	
 	fclose(pf);
 	system("pause");
 }
